@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>untitled</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="Abhinav  Khanna">
+	<script src="jquery-1.7.1.js"></script>
+  <script src="jqueryui.js"></script>
+	<script src="jqmModal.js"></script>
+	<script src="main.js"></script>
+	<link rel="stylesheet" href="jqm.css" />
+
+	<!-- Date: 2013-01-28 -->
+	<style type="text/css">
+	#inputBox
+	{
+		height: 50px;
+		width: 400px;
+		margin-top: 35%;
+		margin-right: 10px;
+		text-align: center;
+	}
+	.std
+	{
+		font-size: 24px;
+		border: 3px solid grey;
+		color: grey;
+	}
+	#mainContainer
+	{
+		height: 800px;
+		width: 700px;
+	}
+	#submit
+	{
+		height: 50px;
+		width: 150px;
+		margin-top: 1%;
+	}
+	body
+	{
+		background-image: url("logo.jpg");
+		background-repeat: no-repeat;
+		background-position: 50% 15%;
+		background-size: 45%;
+	}
+	
+	.overlay
+	{
+		width: 600px;
+		height: 400px;
+		background-color: #E92E00;
+		margin-top: 15%;
+		border-radius: 5px;
+	}
+	#overlayContainer
+	{
+		text-align: center;
+		font-size: 40px;
+		color: white;
+		margin-top: 15%;
+	}
+
+	
+	</style>
+	<script>
+		
+		$(document).ready(function()
+		{
+			ethnic.controller.init();
+		});
+		
+	</script>
+	
+</head>
+<body>
+	<center>
+		<div id="mainContainer">
+			<input type="text" id="inputBox" class="std" placeholder="Enter your name"/>
+			<div>
+				<input type="submit" id="submit" class="std"/>
+			</div>
+		</div>
+	</center>
+	
+	<div class="jqDnR jqmWindow overlay" id="resultOverlay">
+		<div id="overlayContainer">
+			You have been declared by the all holy gods to be:
+			<div id="ethnicResponse"></div>
+		</div>
+	</div>
+	
+</body>
+</html>

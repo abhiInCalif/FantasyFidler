@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<project name="EthnicBuilder" default="war">
+	<path id="compile.classpath">
+		<fileset dir="../tomcat/lib">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="lib">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	<target name="init" depends="clean">
+		<mkdir dir="build/WEB-INF/classes" />
+		<mkdir dir="dist" />
+		<mkdir dir="build/WEB-INF/lib" />
+		<mkdir dir="build/WEB-INF/src" />
+		<mkdir dir="build/WEB-INF/pages" />
+	</target>
+	<target name="compile" depends="init">
+		<javac destdir="build/WEB-INF/classes" srcdir="src" debug="true">
+			<classpath refid="compile.classpath" />
+		</javac>
+	    <copy  todir="build/WEB-INF/classes">
+	      <fileset dir="src" excludes="**/*.java"/>
+	    </copy>
+	</target>
+	<target name="war" depends="compile">
+		<copy todir="build/WEB-INF/src">
+			<fileset dir="src" />
+		</copy>
+		<copy todir="build/WEB-INF/pages">
+			<fileset dir="web/pages" />	
+		</copy>
+		<copy todir="build/WEB-INF/lib">
+			<fileset dir="lib" />
+		</copy>
+		<war destfile="dist/EthnicBuilder.war" webxml="WEB-INF/web.xml">
+			<fileset dir="build" />
+			<classes dir="build/WEB-INF/classes" />
+			<webinf dir="WEB-INF">
+			</webinf>
+		</war>	
+	</target>
+	<target name="clean">
+		<delete dir="dist" />
+		<delete dir="build" />
+	</target>
+</project>

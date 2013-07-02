@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>documents</key>
+	<array>
+		<dict>
+			<key>filename</key>
+			<string>main.css</string>
+			<key>lastUsed</key>
+			<date>2012-11-22T02:56:53Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>home.jsp</string>
+			<key>lastUsed</key>
+			<date>2012-11-22T02:57:19Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>services.js</string>
+		</dict>
+	</array>
+	<key>fileHierarchyDrawerWidth</key>
+	<integer>200</integer>
+	<key>metaData</key>
+	<dict/>
+	<key>showFileHierarchyDrawer</key>
+	<true/>
+	<key>windowFrame</key>
+	<string>{{0, 4}, {1067, 774}}</string>
+</dict>
+</plist>
